@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="zbq-Ef-9JC">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+    </dependencies>
+    <scenes>
+        <!--Customer Table View Controller-->
+        <scene sceneID="yOY-68-z68">
+            <objects>
+                <tableViewController id="FlU-5C-lhU" customClass="CustomerTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="U2J-oY-7ix">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="MJy-Qo-lMw">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MJy-Qo-lMw" id="VFb-XV-IPv">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="FlU-5C-lhU" id="Plx-b7-XxH"/>
+                            <outlet property="delegate" destination="FlU-5C-lhU" id="Rd1-dq-UMq"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="SY3-wU-MCa">
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="yqb-zc-LTW">
+                            <color key="tintColor" red="0.27445418710000002" green="0.73275726009999997" blue="0.59850665319999996" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="loadCustomers:" destination="FlU-5C-lhU" id="fe8-B9-7bu"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d4V-Fw-IEe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1242" y="433"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="TkB-ka-U7r">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zbq-Ef-9JC" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="PHI-w1-v2l">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="FlU-5C-lhU" kind="relationship" relationship="rootViewController" id="IcB-yj-rMj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rDm-CK-AlF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="333" y="433"/>
+        </scene>
+    </scenes>
+</document>
